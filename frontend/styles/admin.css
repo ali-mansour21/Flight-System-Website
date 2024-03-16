@@ -4,8 +4,8 @@
 
 .main .side-bar {
     height: 100%;
-    width: 300px;
-    background-color: #F1EFEF;
+    width: 260px;
+    background-color: #f7f7f7;
     color: white;
 }
 
@@ -20,40 +20,17 @@
     padding-top: 15px;
 }
 
-.dashboard .logo {
-    margin-left: 115px;
-    color: #4F3B37;
-}
 
-.dashboard .search {
-    height: 60px;
-    width: 240px;
-    background-color: #fff;
-    box-shadow: 1px 1px 5px rgb(108, 108, 108);
-    border-radius: 15px;
-    margin-right: 120px;
-}
 
-input {
-    width: 100%;
-    font-size: 14pt;
-    outline:none;
-    border: 0px
-}
-
-.transactions-list {
-    gap: 20px;
-    color: white;
-}
 
 .card {
-    width: 90%;
-    height: 45px;
-    background-color: #2F6775;
+    width: 250px;
+    height: 60px;
+    background-color: #191717;
     display: flex;
-    justify-content: space-around;
+    padding-left: 30px;
     flex-flow: row wrap;
-    align-items: stretch;
+    border-radius: 0 7px 7px 0px;
 }
 
 .card .transaction-name {
