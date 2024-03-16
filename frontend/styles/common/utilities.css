@@ -1,0 +1,130 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.mono-regular {
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+    
+.mono-bold {
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.rounded {
+  border-radius: 10px;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.center {
+  align-items: center;
+}
+.j-center {
+  justify-content: center;
+}
+
+.t-center {
+  text-align: center;
+}
+
+.p1 {
+  padding: 10px;
+}
+
+.p2 {
+  padding: 20px;
+}
+
+.p3 {
+  padding: 30px;
+}
+
+.p4 {
+  padding: 40px;
+}
+
+.p-top {
+  padding-top: 15px;
+}
+
+.m1 {
+  margin: 10px;
+}
+
+.m2 {
+  margin: 20px;
+}
+
+.m3 {
+  margin: 30px;
+}
+
+.m4 {
+  margin: 40px;
+}
+
+.m-left {
+  margin-left: 20px;
+}
+
+.m-top1 {
+  margin-top: 20px;
+}
+
+.m-top2 {
+  margin-top: 60px;
+}
+
+.f-small {
+  font-size: 1.2rem;
+}
+
+.f-medium {
+  font-size: 1.6rem;
+}
+
+.f-big {
+  font-size: 2.4rem;
+}
+.w-100 {
+  width: 100%;
+}
+
+.shadow {
+  box-shadow: 1px -1px 10px;
+}
+
+.btn-primary {
+  background-color: #A1D8E6;
+  width: 145px;
+  height: 70px;
+  border-radius: 25px;
+  border: none;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #374C52;
+  box-shadow: 1px 1px 5px rgb(128, 126, 126);
+  transition: .3s ease-in-out;
+  scale: .9;
+}
+
+.btn-primary:hover {
+  scale: 1;
+  background-color: #66c1d8;
+  color: #27363a;
+  cursor: pointer;
+}

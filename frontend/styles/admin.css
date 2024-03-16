@@ -1,0 +1,90 @@
+.main {
+    height: 100vh;
+}
+
+.main .side-bar {
+    height: 100%;
+    width: 300px;
+    background-color: #F1EFEF;
+    color: white;
+}
+
+.main .upper-bar {
+    height: 150px;
+    width: 100%;
+    background-color: #B05D48;
+}
+.dashboard {
+    justify-content: space-between;
+    
+    padding-top: 15px;
+}
+
+.dashboard .logo {
+    margin-left: 115px;
+    color: #4F3B37;
+}
+
+.dashboard .search {
+    height: 60px;
+    width: 240px;
+    background-color: #fff;
+    box-shadow: 1px 1px 5px rgb(108, 108, 108);
+    border-radius: 15px;
+    margin-right: 120px;
+}
+
+input {
+    width: 100%;
+    font-size: 14pt;
+    outline:none;
+    border: 0px
+}
+
+.transactions-list {
+    gap: 20px;
+    color: white;
+}
+
+.card {
+    width: 90%;
+    height: 45px;
+    background-color: #2F6775;
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+    align-items: stretch;
+}
+
+.card .transaction-name {
+    width: 45%;
+    border-right: 2px solid rgb(255, 252, 252);
+}
+
+.card .type {
+    flex-grow: 0.5;
+    border-right: 2px solid rgb(255, 252, 252);
+}
+
+.card .amount {
+    flex-grow: 0.5;
+}
+
+.card .icons {
+    padding-right: 10px;
+    gap: 20px;
+    color: white;
+}
+
+
+.btn {
+    position: fixed;
+    bottom: 40px;
+    left: 20%;
+}
+
+.balance {
+    width: 30%;
+    align-items: center;
+}
+
