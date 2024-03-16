@@ -1,3 +1,7 @@
+body {
+    font-family: "Poppins", sans-serif;
+}
+
 .main {
     height: 100vh;
 }
@@ -8,18 +12,6 @@
     background-color: #f7f7f7;
     color: white;
 }
-
-.main .upper-bar {
-    height: 150px;
-    width: 100%;
-    background-color: #B05D48;
-}
-.dashboard {
-    justify-content: space-between;
-    
-    padding-top: 15px;
-}
-
 
 
 
@@ -33,35 +25,4 @@
     border-radius: 0 7px 7px 0px;
 }
 
-.card .transaction-name {
-    width: 45%;
-    border-right: 2px solid rgb(255, 252, 252);
-}
-
-.card .type {
-    flex-grow: 0.5;
-    border-right: 2px solid rgb(255, 252, 252);
-}
-
-.card .amount {
-    flex-grow: 0.5;
-}
-
-.card .icons {
-    padding-right: 10px;
-    gap: 20px;
-    color: white;
-}
-
-
-.btn {
-    position: fixed;
-    bottom: 40px;
-    left: 20%;
-}
-
-.balance {
-    width: 30%;
-    align-items: center;
-}
 

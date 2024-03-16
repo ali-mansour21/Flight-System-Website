@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+
 .poppins-regular {
     font-family: "Poppins", sans-serif;
     font-weight: 400;
@@ -149,4 +150,19 @@
   color: black;
   font-weight: 600;
   line-height: 1.1;
+}
+
+
+.name {
+  margin-left: 60px;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+.title {
+  margin-left: 80px;
+  font-size: 1.8rem;
+  font-weight: 800;
 }
