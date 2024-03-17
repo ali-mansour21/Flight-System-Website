@@ -70,6 +70,10 @@
   padding-left: 30px;
 }
 
+.p-left1 {
+  padding-left: 50px;
+}
+
 .m1 {
   margin: 10px;
 }
@@ -156,7 +160,6 @@
 
 .logo-img {
   margin-left: 30px;
-
 }
 .logo {
   color: black;
@@ -177,3 +180,4 @@
   font-weight: 800;
 
 }
+
