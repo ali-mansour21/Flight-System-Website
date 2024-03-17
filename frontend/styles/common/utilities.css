@@ -31,6 +31,10 @@
   flex-direction: column;
 }
 
+.flex-end {
+  align-items: flex-end;
+}
+
 .center {
   align-items: center;
 }
@@ -62,6 +66,10 @@
   padding-top: 15px;
 }
 
+.p-left {
+  padding-left: 30px;
+}
+
 .m1 {
   margin: 10px;
 }
@@ -88,6 +96,10 @@
 
 .m-top2 {
   margin-top: 60px;
+}
+
+.m-botom {
+  margin-bottom: 5px;
 }
 
 .f-small {
@@ -152,7 +164,6 @@
   line-height: 1.1;
 }
 
-
 .name {
   margin-left: 60px;
   margin-top: 30px;
@@ -162,8 +173,7 @@
 }
 
 .title {
-  margin-left: 80px;
   font-size: 1.8rem;
   font-weight: 800;
-  
+
 }
