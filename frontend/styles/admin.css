@@ -1,28 +1,57 @@
 body {
-    font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif;
+  background-color: #f1efef;
 }
 
 .main {
-    height: 100vh;
+  height: 100vh;
 }
 
 .main .side-bar {
-    height: 100%;
-    width: 260px;
-    background-color: #f7f7f7;
-    color: white;
+  height: 100%;
+  width: 260px;
+  background-color: #f7f7f7;
+  color: white;
 }
-
-
 
 .card {
-    width: 250px;
-    height: 60px;
-    background-color: #191717;
-    display: flex;
-    padding-left: 30px;
-    flex-flow: row wrap;
-    border-radius: 0 7px 7px 0px;
+  width: 250px;
+  height: 60px;
+  background-color: #191717;
+  display: flex;
+  padding-left: 30px;
+  flex-flow: row wrap;
+  border-radius: 0 7px 7px 0px;
 }
-
-
+.overview {
+  margin: 80px 80px auto 80px;
+}
+.overview .container {
+  display: flex;
+  justify-content: space-around;
+}
+.overview .container .box {
+  position: relative;
+  background-color: #ffffff;
+  padding: 20px;
+  display: flex;
+  width: 320px;
+  height: 310px;
+  flex-wrap: wrap;
+  flex-direction: column;
+  border-radius: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+.overview .container .box img {
+  width: 30px;
+  height: 30px;
+  margin-top: 20px;
+}
+.overview .container .box h2 {
+  font-weight: bold;
+}
+.overview .container .box p {
+  color: rgba(0, 0, 0, 0.4);
+  text-transform: capitalize;
+}
