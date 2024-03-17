@@ -30,6 +30,10 @@
   flex-direction: column;
 }
 
+.flex-end {
+  align-items: flex-end;
+}
+
 .center {
   align-items: center;
 }
@@ -164,7 +168,6 @@
 }
 
 .title {
-  margin-left: 80px;
   font-size: 1.8rem;
   font-weight: 800;
 

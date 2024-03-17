@@ -14,11 +14,11 @@ body {
     color: white;
 }
 
-.main .upper-bar {
-    height: 150px;
-    width: 100%;
-    background-color: #B05D48;
+.content {
+    margin: 0 50px;
 }
+
+
 .dashboard {
     justify-content: space-between;
     
@@ -36,10 +36,6 @@ body {
     border-radius: 0 7px 7px 0px;
 }
 
-.card .transaction-name {
-    width: 45%;
-    border-right: 2px solid rgb(255, 252, 252);
-}
 
 .card .type {
     flex-grow: 0.5;
@@ -67,6 +63,16 @@ body {
     width: 30%;
     align-items: center;
 }
+.table {
+    width: 100%;
+}
+
+.table-head {
+    padding-left: 30px;
+    width: 80%;
+    justify-content: space-between;
+}
+
 
 .table-row {
     background-color: #4280B9;
@@ -83,4 +89,17 @@ body {
     color: #ffffff;
     padding-left: 30px;
     flex-grow: 1
+}
+
+.create {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(29, 141, 9);
+    border-radius: 50%;
+    justify-content: center;
+}
+
+.create > img {
+    scale: 0.6;
 }
