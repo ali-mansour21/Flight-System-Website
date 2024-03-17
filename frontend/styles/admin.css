@@ -2,7 +2,9 @@ body {
   font-family: "Poppins", sans-serif;
   background-color: #f1efef;
 }
-
+a {
+  text-decoration: none;
+}
 .main {
   height: 100vh;
 }
@@ -54,4 +56,36 @@ body {
 .overview .container .box p {
   color: rgba(0, 0, 0, 0.4);
   text-transform: capitalize;
+}
+.feedback {
+    margin-top: 80px;
+}
+.feedback .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 20px;
+}
+.feedback .container .review {
+  background-color: #ffffff;
+  padding: 20px;
+}
+.feedback .container .review .info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+.feedback .container .review .info h2 {
+  font-size: 20px;
+}
+.feedback .container .review .delete {
+  display: flex;
+  justify-content: flex-end;
+}
+.feedback .container .review .delete button {
+  border: none;
+  background-color: transparent;
+}
+.feedback .container .review .delete button:hover {
+  cursor: pointer;
 }
