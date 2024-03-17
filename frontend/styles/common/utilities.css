@@ -1,20 +1,19 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-
 
 .poppins-regular {
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
-    
+
 .poppins-bold {
-    font-family: "Poppins", sans-serif;
-    font-weight: 700;
-    font-style: normal;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }
 
 .rounded {
@@ -89,7 +88,15 @@
 .m-left {
   margin-left: 20px;
 }
-
+.ml-80 {
+  margin-left: 80px;
+}
+.mr-80 {
+  margin-right: 80px;
+}
+.mb-30 {
+  margin-bottom: 30px;
+}
 .m-top1 {
   margin-top: 20px;
 }
@@ -122,17 +129,17 @@
 }
 
 .btn-primary {
-  background-color: #A1D8E6;
+  background-color: #a1d8e6;
   width: 145px;
   height: 70px;
   border-radius: 25px;
   border: none;
   font-size: 1.6rem;
   font-weight: 600;
-  color: #374C52;
+  color: #374c52;
   box-shadow: 1px 1px 5px rgb(128, 126, 126);
-  transition: .3s ease-in-out;
-  scale: .9;
+  transition: 0.3s ease-in-out;
+  scale: 0.9;
 }
 
 .btn-primary:hover {
@@ -153,10 +160,8 @@
   gap: 20px;
 }
 
-
 .logo-img {
   margin-left: 30px;
-
 }
 .logo {
   color: black;
@@ -175,5 +180,7 @@
 .title {
   font-size: 1.8rem;
   font-weight: 800;
-
+}
+.white {
+  color: #ffffff;
 }

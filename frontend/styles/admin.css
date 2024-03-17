@@ -1,106 +1,135 @@
 body {
-    background-color: #f7f7f7;
-    font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif;
+  background-color: #f1efef;
 }
-
+a {
+  text-decoration: none;
+}
 .main {
-    height: 100vh;
+  height: 100vh;
 }
 
 .main .side-bar {
-    height: 100%;
-    width: 260px;
-    background-color: #f7f7f7;
-    color: white;
+  height: 100%;
+  width: 260px;
+  background-color: #f7f7f7;
+  color: white;
 }
-
-.content {
-    margin: 0 50px;
-}
-
-
-.dashboard {
-    justify-content: space-between;
-    
-    padding-top: 15px;
-}
-
 
 .card {
-    width: 230px;
-    height: 60px;
-    background-color: #191717;
-    display: flex;
-    padding-left: 30px;
-    flex-flow: row wrap;
-    border-radius: 0 7px 7px 0px;
+  width: 250px;
+  height: 60px;
+  background-color: #191717;
+  display: flex;
+  padding-left: 30px;
+  flex-flow: row wrap;
+  border-radius: 0 7px 7px 0px;
+}
+.overview {
+  margin: 80px 80px auto 80px;
+}
+.overview .container {
+  display: flex;
+  justify-content: space-around;
+}
+.overview .container .box {
+  position: relative;
+  background-color: #ffffff;
+  padding: 20px;
+  display: flex;
+  width: 320px;
+  height: 310px;
+  flex-wrap: wrap;
+  flex-direction: column;
+  border-radius: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+.overview .container .box img {
+  width: 30px;
+  height: 30px;
+  margin-top: 20px;
+}
+.overview .container .box h2 {
+  font-weight: bold;
+}
+.overview .container .box p {
+  color: rgba(0, 0, 0, 0.4);
+  text-transform: capitalize;
+}
+.feedback {
+  margin-top: 80px;
+}
+.feedback .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 20px;
+}
+.feedback .container .review {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 20px;
+}
+.feedback .container .review .info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+.feedback .container .review .delete {
+  display: flex;
+  justify-content: flex-end;
+}
+.feedback .container .review .delete button {
+  border: none;
+  background-color: transparent;
+}
+.feedback .container .review .delete button:hover {
+  cursor: pointer;
+}
+.support {
+  margin-top: 80px;
+}
+.support .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(550px, 1fr));
+  gap: 20px;
+}
+.support .container .question-card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 20px;
+}
+.support .container .question-card .actions {
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
 }
 
-
-.card .type {
-    flex-grow: 0.5;
-    border-right: 2px solid rgb(255, 252, 252);
+.support .container .actions button {
+  border: none;
+  background-color: transparent;
+}
+.support .container .actions button:hover {
+  cursor: pointer;
+}
+.support .container .actions img {
+  width: 20px;
+}
+.support .container .actions .reply {
+  background-color: #f7f7f7;
+  padding: 5px;
+  border-radius: 7px;
+}
+.support .container .actions .reply input {
+  border: none;
+  padding: 5px;
+  background-color: #f7f7f7;
 }
 
-.card .amount {
-    flex-grow: 0.5;
+.support .container .actions .reply input:focus {
+  outline: none;
 }
-
-.card .icons {
-    padding-right: 10px;
-    gap: 20px;
-    color: white;
+.support .container .actions .reply img {
+  width: 20px;
 }
-
-
-.btn {
-    position: fixed;
-    bottom: 40px;
-    left: 20%;
-}
-
-.balance {
-    width: 30%;
-    align-items: center;
-}
-.table {
-    width: 100%;
-}
-
-.table-head {
-    padding-left: 30px;
-    width: 80%;
-    justify-content: space-between;
-}
-
-
-.table-row {
-    background-color: #4280B9;
-    width: 80%;
-    height: 100px;
-    display: flex;
-    flex-flow: row wrap;
-    margin: 30px;
-}
-
-.table-row .el {
-    font-size: 1.6rem;
-    font-weight: 700;
-    color: #ffffff;
-    padding-left: 30px;
-    flex-grow: 1
-}
-
-.create {
-    display: flex;
-    width: 50px;
-    height: 50px;
-    background-color: rgb(29, 141, 9);
-    border-radius: 50%;
-    justify-content: center;
-}
-
-.create > img {
-    scale: 0.6;
-}
-
