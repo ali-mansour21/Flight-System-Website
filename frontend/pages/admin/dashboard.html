@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Admin Dashboard - Flights</title>
+    <title>Admin Dashboard</title>
     <link rel="stylesheet" href="../../styles/common/utilities.css" />
     <link rel="stylesheet" href="../../styles/admin.css" />
 
@@ -16,7 +16,7 @@
   </head>
   <body>
     <section class="main flex-row">
-      <section class="side-bar poppins-regular shadow">
+     <section class="side-bar poppins-regular shadow">
         <div class="title-element f-big p-top flex-row gap-5">
           <img src="../../assets/logo.svg" alt="" class="logo-img" />
           <div class="logo">Flight<br />Jet</div>
@@ -76,53 +76,27 @@
         <nav>
           <div class="name poppins-regular">Mohammad Ali Alaawar</div>
         </nav>
-
-        <div class="table">
-          <div class="flex-row table-head">
-            <div class="title">Flights</div>
-            <div class="create">
-              <img src="../../assets/plusIcon.svg" alt="" />
+        <h1 class="title m-left">Overview</h1>
+        <div class="overview">
+          <div class="container">
+            <div class="box red">
+              <img src="../../assets/Vector.svg" alt="" />
+              <h2>100</h2>
+              <p>user</p>
+            </div>
+            <div class="box green">
+              <img src="../../assets/Vector (1).svg" alt="" />
+              <h2>100</h2>
+              <p>book</p>
+            </div>
+            <div class="box blue">
+              <img src="../../assets/Vector (2).svg" alt="" />
+              <h2>100</h2>
+              <p>revenue</p>
             </div>
           </div>
-          <div class="table-row flex-row gap2 rounded center m-botom">
-            <div class="el">Name</div>
-            <div class="el">AirPlane</div>
-            <div class="el">Departure Date</div>
-            <div class="el">Arrival Date</div>
-            <div class="el">Status</div>
-            <div class="el">Action</div>
-          </div>
-          <div class="table-row flex-row gap2 rounded center m-botom">
-            <div class="el">Name</div>
-            <div class="el">AirPlane</div>
-            <div class="el">Departure Date</div>
-            <div class="el">Arrival Date</div>
-            <div class="el">Status</div>
-            <div class="el">Action</div>
-          </div>
-          <div class="table-row flex-row gap2 rounded center m-botom">
-            <div class="el">Name</div>
-            <div class="el">AirPlane</div>
-            <div class="el">Departure Date</div>
-            <div class="el">Arrival Date</div>
-            <div class="el">Status</div>
-            <div class="el">Action</div>
-          </div>
-          <div class="table-row flex-row gap2 rounded center m-botom">
-            <div class="el">Name</div>
-            <div class="el">AirPlane</div>
-            <div class="el">Departure Date</div>
-            <div class="el">Arrival Date</div>
-            <div class="el">Status</div>
-            <div class="el">Action</div>
-          </div>
-          <div class="table-row flex-row gap2 rounded center m-botom">
-            <div class="el">Name</div>
-            <div class="el">AirPlane</div>
-            <div class="el">Departure Date</div>
-            <div class="el">Arrival Date</div>
-            <div class="el">Status</div>
-            <div class="el">Action</div>
+          <div class="chart">
+            <canvas id="myChart"></canvas>
           </div>
         </div>
       </section>
