@@ -166,6 +166,28 @@ width: 400px;
 border-radius: 30px;
 }
 
+.card{
+    gap: 50px;
+    justify-content: center;
+    padding-left: 30px;
+    
+}
+.section-3 img{
+height: 54px;
+width: 54px;
+}
+.submit-btn{
+height:40px 
+;
+width: 120px;
+background-color: #0073DD;
+border-radius: 10px;
+display: flex;
+justify-content: center;
+align-items: center;
+margin-right: 30px;
+}
+
 
 
 /* more general styling */
