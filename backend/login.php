@@ -21,8 +21,8 @@ if ($result->num_rows > 0) {
         $token = JWT::encode(
             array(
                 "email" => $row['email'],
-                "type" => $row['type'],
-                "id" => $row['id']
+                "user_type" => $row['type'],
+                "id" => $row['user_id']
             ),
             $secret_key,
             $algorithm
@@ -34,7 +34,8 @@ if ($result->num_rows > 0) {
         $response['status'] = "error";
         $response['message'] = "Invalid password";
     }
-}else{
+} else {
     $response['status'] = "error";
     $response['message'] = "Invalid email";
 }
+echo json_encode($response);

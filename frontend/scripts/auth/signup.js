@@ -48,9 +48,6 @@ const createUser = async () => {
       let userType = getUserType(response.data.token);
       if (response.data.status === "success" && userType === 0) {
         window.location.href = "http://127.0.0.1:5500/frontend/index.html";
-      } else if (response.data.status === "success" && userType === 1) {
-        window.location.href =
-          "http://127.0.0.1:5500/frontend/pages/admin/dashboard.html";
       }
     } else {
       showToast("Please fill all the fields");
