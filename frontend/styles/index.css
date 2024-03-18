@@ -163,3 +163,7 @@ a {
     opacity: 1;
     transition: opacity 0.3s ease-in-out 0.4;
 }
+
+.icon {
+    max-width: 40px;
+}
