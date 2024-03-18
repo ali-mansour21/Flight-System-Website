@@ -57,6 +57,9 @@ a {
   color: rgba(0, 0, 0, 0.4);
   text-transform: capitalize;
 }
+.overview .chart {
+  max-width: 95%;
+}
 .feedback {
   margin-top: 80px;
 }
