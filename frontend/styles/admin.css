@@ -151,18 +151,17 @@ a {
   width: 80%;
   height: 100px;
   display: flex;
-  flex-flow: row wrap;
   margin: 30px;
 }
 
 .table-row .el {
   font-size: 1.6rem;
   font-weight: 700;
+  width: 30%;
   color: #ffffff;
   padding-left: 30px;
   flex-grow: 1;
 }
-
 .create {
   display: flex;
   width: 50px;
@@ -174,4 +173,92 @@ a {
 
 .create > img {
   scale: 0.6;
+}
+.create > img:hover {
+  cursor: pointer;
+}
+.delete-flight,
+.edit-flight {
+  border: none;
+  background-color: transparent;
+}
+.delete-flight:hover,
+.edit-flight:hover {
+  cursor: pointer;
+}
+.pop-up {
+  position: absolute;
+  top: 130px;
+  left: 25%;
+  width: 50%;
+  height: 90%;
+  opacity: 0;
+  display: none;
+  transition: opacity 0.3s ease;
+}
+@media (max-width: 768px) {
+  .pop-up {
+    width: 80%;
+    left: 17%;
+  }
+}
+.popup-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  overflow-y: scroll;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="time"],
+input[type="number"],
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: none;
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #45a049;
+}
+.show {
+  display: block;
+  opacity: 1;
 }
