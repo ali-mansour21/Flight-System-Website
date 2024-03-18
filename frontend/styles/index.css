@@ -13,11 +13,7 @@ a {
     gap: 30px;
     justify-content: space-between;
     align-items: center;
-
-
 }
-
-
 
 .user-header .logo {
     display: flex;
@@ -45,3 +41,37 @@ a {
     font-size: 1.6rem;
 }
 
+.hero {
+    height: 84.8vh;
+    width: auto;
+    background-color: #121212;
+    display: flex;
+    justify-content: center;
+}
+
+.hero .info {
+width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 100px;
+}
+
+.hero .hero-img {
+scale: 0.6;
+transform: translateY(-100px);
+}
+
+.hero .info .secondary-text {
+    font-size: 2.4rem;
+    color: white;
+    margin-bottom: 80px;
+    font-weight: 400;
+}
+
+.hero .info .primary-text {
+    font-size: 4rem;
+    color: white;
+    font-weight: 400;
+}
