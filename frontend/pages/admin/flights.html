@@ -180,6 +180,93 @@
         </form>
       </div>
     </div>
+    <div class="pop-up" id="pop-up-editeFlight">
+      <div class="popup-content">
+        <span class="close" id="close-Editflight">&times;</span>
+        <h2>Create Flight</h2>
+        <form id="editFlightForm">
+          <div class="form-group">
+            <label for="airline">Airline Name</label>
+            <select id="editAirline" name="airline" required></select>
+          </div>
+          <div class="form-group">
+            <label for="airplane">Airplane Name</label>
+            <select id="editAirplane" name="airplane" required></select>
+          </div>
+          <div class="form-group">
+            <label for="departureAirport">Departure Airport</label>
+            <input
+              type="text"
+              id="editDepartureAirport"
+              name="departureAirport"
+              placeholder="enter the departure airport"
+            />
+          </div>
+          <div class="form-group">
+            <label for="arrivalAirport">Arrival Airport</label>
+            <input
+              type="text"
+              id="editArrivalAirport"
+              name="arrivalAirport"
+              placeholder="enter the ariival Airport"
+            />
+          </div>
+          <div class="form-group">
+            <label for="departureDate">Departure Date</label>
+            <input
+              type="date"
+              id="editDepartureDate"
+              name="departureDate"
+              placeholder="enter the departure date"
+            />
+          </div>
+          <div class="form-group">
+            <label for="arrivalDate">Arrival Date</label>
+            <input
+              type="date"
+              id="editArrivalDate"
+              name="arrivalDate"
+              placeholder="enter the arrival date"
+            />
+          </div>
+          <div class="form-group">
+            <label for="departureTime">Departure Time</label>
+            <input
+              type="time"
+              id="editDepartureTime"
+              name="departureTime"
+              placeholder="enter the departure time"
+            />
+          </div>
+          <div class="form-group">
+            <label for="arrivalTime">Arrival Time</label>
+            <input
+              type="time"
+              id="editArrivalTime"
+              name="arrivalTime"
+              placeholder="enter the arrival time"
+            />
+          </div>
+          <div class="form-group">
+            <label for="flightStatus">Flight Status</label>
+            <select name="flightStatus" id="flightStatus">
+              <option value="0">Running</option>
+              <option value="1">Canceled</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="basePrice">Base Price</label>
+            <input
+              type="text"
+              placeholder="enter the price"
+              name="basePrice"
+              id="editBasePrice"
+            />
+          </div>
+          <button type="submit">Edit</button>
+        </form>
+      </div>
+    </div>
     <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
     <script src="../../scripts/admin/flights.js"></script>
   </body>
