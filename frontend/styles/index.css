@@ -115,13 +115,21 @@ a {
 }
 
 
-.search-section { /* BODY */
+.search-section {
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
     height: 90vh;
+    padding-bottom: 40px;
+    margin-bottom: 80px;
+}
 
+.search-section > h2 {
+  padding-top: 30px;
+  font-size: 2.4rem;
+  font-weight: 800;
+  text-align: center;
 }
 
 .container-search {
@@ -166,4 +174,22 @@ a {
 
 .icon {
     max-width: 40px;
+}
+
+.info-section {
+  width: 90%;
+  margin: auto;
+  justify-content: center;
+}
+
+.info-section .info-text h2 {
+  padding-top: 50px;
+  font-size: 3.6rem;
+  text-align: center;
+}
+
+.info-section .info-text p {
+  padding-left: 40px;
+  padding-top: 30px;
+  font-size: 2rem;
 }
