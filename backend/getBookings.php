@@ -1,7 +1,9 @@
 <?php
 include "./connection.php";
 
-$query = $conn->prepare('select * from bookings');
+$query = $conn->prepare('SELECT b.*, u.first_name, u.last_name 
+                         FROM bookings AS b 
+                         JOIN users AS u ON b.user_id = u.user_id');
 
 $query->execute();
 $query->store_result();
@@ -13,28 +15,19 @@ $query->bind_result(
     $booking_time,
     $number_of_passengers,
     $total_price,
-    $payment_status
+    $payment_status,
+    $first_name,
+    $last_name
 );
 while ($query->fetch()) {
     $booking = [
         'id' => $id,
-        'user_id' => $user_id,
+        'user_name' => $first_name . ' ' . $last_name,
         'flight_id' => $flight_id,
-        'booking_status' => $booking_status
+        'payment_status' => $payment_status
     ];
     $response['bookings'][] = $booking;
 }
-$query_user = $conn->prepare('select * from users');
-$query_user->execute();
-$query_user->store_result();
-$query_user->bind_result($id, $first_name, $last_name);
-while ($query_user->fetch()) {
-    $user = [
-        'id' => $id,
-        'first_name' => $first_name,
-        'last_name' => $last_name
-    ];
-    $response['users'][] = $user;
-}
 
 echo json_encode($response);
+?>
