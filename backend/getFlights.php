@@ -15,16 +15,22 @@ $query->bind_result(
     $arrival_date,
     $departure_time,
     $arrival_time,
-    $base_brice,
+    $base_price,
     $flight_status
 );
 while ($query->fetch()) {
     $flight = [
         'id' => $id,
         'airplane_id' => $airplane_id,
+        'airline_id' => $airline_id,
+        'departure_airport' => $departure_airport,
+        'arrival_airport' => $arrival_airport,
         'departure_date' => $departure_date,
         'arrival_date' => $arrival_date,
-        'flight_status' => $flight_status
+        'departure_time' => $departure_time,
+        'arrival_time' => $arrival_time,
+        'flight_status' => $flight_status,
+        'base_price' => $base_price
     ];
     $response['flights'][] = $flight;
 }
@@ -43,7 +49,7 @@ while ($query_airplane->fetch()) {
 $query_airline = $conn->prepare('select * from airlines');
 $query_airline->execute();
 $query_airline->store_result();
-$query_airline->bind_result($id,$name);
+$query_airline->bind_result($id, $name);
 
 while ($query_airline->fetch()) {
     $airline = [
