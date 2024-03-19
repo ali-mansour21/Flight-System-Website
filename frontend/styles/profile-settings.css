@@ -54,7 +54,10 @@ body{
     height: 50px;
 }
 
-
+.submit-btn{
+    height: auto;
+    margin-left: 20px;
+}
 
 
 
