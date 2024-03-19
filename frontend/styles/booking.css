@@ -178,10 +178,20 @@ height: 54px;
 width: 54px;
 }
 .submit-btn{
+height:40px ;
+width: 120px;
+background-color: #0073DD;
+border-radius: 10px;
+display: flex;
+justify-content: center;
+align-items: center;
+margin-right: 30px;
+}
+.submit-btn-red{
 height:40px 
 ;
 width: 120px;
-background-color: #0073DD;
+background-color: red;
 border-radius: 10px;
 display: flex;
 justify-content: center;
@@ -218,3 +228,4 @@ margin-right: 30px;
 .border-10{
     border-radius: 10px;
 }
+

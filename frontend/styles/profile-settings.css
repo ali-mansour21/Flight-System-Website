@@ -104,3 +104,14 @@ flex-grow: 2;
     display: flex;
     align-items: center;
 }
+
+.mg-top-10{
+    margin-top: 10%;
+}
+.mg-left-5{
+    margin-left: 5%;
+}
+.a{
+    display: flex;
+    grid-area: 100px;
+}
