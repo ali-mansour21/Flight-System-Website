@@ -24,6 +24,7 @@ body{
 
 .navbar{
     color: white;
+    font-size: 20px;
     width: 100vw;
     justify-content: end;
     padding-top: 30px;
