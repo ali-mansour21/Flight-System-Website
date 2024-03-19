@@ -47,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     echo json_encode($response);
 }
 if ($_SERVER['REQUEST_METHOD'] == 'DELETE') {
-    $review_id = $_POST['review_id'];
+    $review_id = $_GET['review_id'];
     $query = $conn->prepare('DELETE FROM reviews where review_id =?');
     $query->bind_param('i', $review_id);
     if ($query->execute()) {
