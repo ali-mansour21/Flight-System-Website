@@ -34,7 +34,7 @@ $row = $books_result->fetch_assoc();
 
 $response['totalBooks'] = $row['totalBooks'];
 
-$revene_query = $conn->prepare('select sum(total_price) as totalRevenes from bookings');
+$revene_query = $conn->prepare('select sum(base_price) as totalRevenes from flights');
 
 
 $revene_query->execute();
