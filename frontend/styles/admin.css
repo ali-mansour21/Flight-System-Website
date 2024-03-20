@@ -103,6 +103,9 @@ a {
   padding: 20px;
   border-radius: 20px;
 }
+.support .container .question-card p {
+  height: 75px;
+}
 .support .container .question-card .actions {
   justify-content: space-between;
   align-items: center;

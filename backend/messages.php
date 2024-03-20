@@ -26,14 +26,27 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     }
     echo json_encode($response);
 }
-if($_SERVER['REQUEST_METHOD']== 'POST'){
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $user_id = $_POST['user_id'];
     $message_text = $_POST['message_text'];
     $query = $conn->prepare('insert into messages (message_text,user_id) values (?,?)');
     $query->bind_param('si', $message_text, $user_id);
     if ($query->execute()) {
-        $response['status'] ='success';
+        $response['status'] = 'success';
         $response['message'] = "Message sent successfully";
+    } else {
+        $response['status'] = 'error';
+        $response['message'] = "Something went wrong";
+    }
+    echo json_encode($response);
+}
+if ($_SERVER['REQUEST_METHOD'] == 'DELETE') {
+    $message_id = $_GET['message_id'];
+    $query = $conn->prepare('DELETE FROM messages where message_id = ?');
+    $query->bind_param('i', $message_id);
+    if ($query->execute()) {
+        $response['status'] = 'success';
+        $response['message'] = "Deleted successfully";
     } else {
         $response['status'] = 'error';
         $response['message'] = "Something went wrong";
