@@ -47,7 +47,6 @@ document.addEventListener("DOMContentLoaded", () => {
             id
           )}`
         );
-        console.log(response);
         getSupportData();
       } catch (error) {
         console.log(error);
@@ -66,11 +65,11 @@ document.addEventListener("DOMContentLoaded", () => {
         const responseData = new FormData();
         responseData.append("user_id", userId);
         responseData.append("message_text", messageText);
+        responseData.append("user_type", 1);
         const response = await axios.post(
-          `http://localhost/Flight-System/backend/adminResponse.php`,
+          `http://localhost/Flight-System/backend/messages.php`,
           responseData
         );
-        console.log(response);
       } catch (error) {
         console.log(error);
       }
