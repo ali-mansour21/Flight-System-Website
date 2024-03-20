@@ -1,40 +1,60 @@
-let scrollCounter = 0; 
-let backgroundImage= document.getElementsByClassName("hero")
+let scrollCounter = 0;
+const hero = document.getElementsByClassName("hero");
 
-const card=document.getElementById("image-card");
+const card = document.getElementById("image-card");
+const back = document.getElementById("image-bck");
+let page = 0;
 
-window.addEventListener('scroll', ()=> {
-const scroll=window.scrollY
-   console.log(scroll);
+let lastScrollPosition = window.scrollY;
 
+let scrollDirectionElement;
 
-window.addEventListener('wheel', (event) =>{
-    if (event.deltaY > 0) {
-        console.log('Scrolling down');
-        
-        switch (scrollCounter) {
-            case 0:
-        let a=`<img id="" src="./../../assets/Egypt6 1.png" alt>`;
-   card.innerHTML =a
-   console.log("heriu")}
-                break;
-        
-            default:
-                break;
-        }
+window.addEventListener("scroll", function () {
+  let currentScrollPosition = window.scrollY;
 
-//    if(scroll>0 && scroll<100 )
-//    window.scrollTo(0,550)
-     else if (event.deltaY < 0) {
-        console.log('Scrolling up');
-   window.scrollTo(0,0)
+  if (currentScrollPosition > lastScrollPosition) {
+    scrollDirectionElement = "Down";
 
+    if (this.window.scrollY > 100) {
+      switch (page) {
+        case 0:
+          card.classList.add("fade-out");
+          back.classList.add("fade-out");
+          setTimeout(() => {
+            card.src = "../../assets/bookig-page/card-2.webp";
+            back.src = "../../assets/bookig-page/bck-2.webp";
+            card.classList.remove("fade-out");
+            back.classList.remove("fade-out");
+            page = 1;
+            window.scrollTo(0, 0);
+          }, 500);
+          break;
+
+        case 1:
+          card.classList.add("fade-out");
+          back.classList.add("fade-out");
+          setTimeout(() => {
+            card.src = "../../assets/bookig-page/card-3.png";
+            back.src = "../../assets/bookig-page/bck-3.webp";
+            card.classList.remove("fade-out");
+            back.classList.remove("fade-out");
+            page = 2;
+            window.scrollTo(0, 0);
+          }, 500);
+          break;
+        case 2:
+          this.scrollTo(0, 600);
+          page = 3;
+          console.log(window.scrollY);
+          break;
+
+        default:
+          break;
+      }
     }
-}});
+  } else {
+    scrollDirectionElement = "Up";
+  }
 
-
-//    if(scroll>500 && scroll<100)
-//    window.scrollTo(0,0)
-
-   
+  lastScrollPosition = currentScrollPosition;
 });

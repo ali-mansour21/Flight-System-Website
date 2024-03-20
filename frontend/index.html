@@ -41,22 +41,22 @@
     <section class="search-form flex-row j-center">
       <div class="search-card">
         <form action="#" class="search-form j-center">
-          <select name="destination" id="" class="search-item">
-            <option value="" selected disabled>Choose your destination</option>
-            <option value="Beirut, Lebanon">Beirut, Lebanon</option>
-            <option value="Venice, Italy">Venice, Italy</option>
-            <option value="Lisbon, Portugal">Lisbon, Portugal</option>
-            <option value="Bagan, Myanmar">Bagan, Myanmar</option>
-          </select>
           <div class="search-item">
-            <placeholder for="date">Choose date:</placeholder>
+            <input
+              class="destination"
+              type="text"
+              placeholder="enter your destination"
+            />
+          </div>
+          <div class="search-item">
+            <placeholder for="date">Choose Departure date:</placeholder>
             <input type="date" class="date-picker" />
           </div>
           <div class="search-item">
-            <placeholder for="date">Choose date:</placeholder>
+            <placeholder for="date">Choose Arrival date:</placeholder>
             <input type="date" class="date-picker" />
           </div>
-          <button type="submit">
+          <button class="search-btn" type="submit">
             <img src="./assets/searchicon.svg" alt="" class="icon" />
           </button>
         </form>
