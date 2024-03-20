@@ -2,7 +2,7 @@ let airPlanes = [];
 let airLines = [];
 let flights = [];
 const flightsData = document.getElementById("flightsData");
-const addFlightsButton = document.getElementById("addFlightButton");
+const addFlightButton = document.getElementById("addFlightButton");
 const addFlightForm = document.getElementById("addFlightForm");
 const popUpFlight = document.getElementById("pop-up-createFlight");
 const closeFlight = document.getElementById("close-flight");
@@ -183,7 +183,7 @@ const editFlight = async (flightId) => {
     }
   });
 };
-addFlightsButton.addEventListener("click", () => {
+addFlightButton.addEventListener("click", () => {
   popUpFlight.classList.add("show");
 });
 closeFlight.addEventListener("click", () => {

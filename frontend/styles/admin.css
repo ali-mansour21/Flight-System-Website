@@ -189,6 +189,24 @@ a {
 .edit-flight:hover {
   cursor: pointer;
 }
+.delete-coin,
+.edit-coin {
+  border: none;
+  background-color: transparent;
+}
+.delete-coin:hover,
+.edit-coin:hover {
+  cursor: pointer;
+}
+.delete-booking,
+.edit-booking {
+  border: none;
+  background-color: transparent;
+}
+.delete-booking:hover,
+.edit-booking:hover {
+  cursor: pointer;
+}
 .pop-up {
   position: absolute;
   top: 130px;
