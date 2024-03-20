@@ -1,4 +1,7 @@
 let scrollCounter = 0;
+let flights = [];
+let selectedFlightList = [];
+
 const hero = document.getElementsByClassName("hero");
 const card = document.getElementById("image-card");
 const back = document.getElementById("image-bck");
@@ -16,7 +19,7 @@ const getFlights = async () => {
     const response = await axios.get(
       "http://localhost/Flight-System/backend/getFlights.php"
     );
-    const flights = response.data.flights;
+    flights = response.data.flights;
     allFlightsConatiner.innerHTML = "";
     flights.forEach((flight) => {
       allFlightsConatiner.innerHTML += generateFlightsCard(flight);
@@ -54,7 +57,6 @@ function formatTime(timeString, hourOffset = 0) {
   return formattedTime;
 }
 const generateFlightsCard = (flight) => {
-  console.log(flight);
   const {
     base_price,
     id,
@@ -94,6 +96,26 @@ const generateFlightsCard = (flight) => {
         </div>
       </div>`;
 };
+const showToast = (message, duration = 2000) => {
+  const toast = document.createElement("div");
+  toast.classList.add("toast");
+  toast.textContent = message;
+
+  document.body.appendChild(toast);
+
+  setTimeout(() => {
+    toast.remove();
+  }, duration);
+};
+document.addEventListener("click", (e) => {
+  if (e.target.classList.contains("addDeal")) {
+    const flightId = parseInt(e.target.getAttribute("data-set-flight"));
+    const selectedFlight = flights.find((flight) => flight.id === flightId);
+    selectedFlightList.push(selectedFlight);
+    localStorage.setItem("bookedFlights", JSON.stringify(selectedFlightList));
+    showToast("Please confirm your booking in your profile");
+  }
+});
 window.addEventListener("scroll", function () {
   let currentScrollPosition = window.scrollY;
 
@@ -130,7 +152,6 @@ window.addEventListener("scroll", function () {
         case 2:
           this.scrollTo(0, 600);
           page = 3;
-          console.log(window.scrollY);
           break;
 
         default:

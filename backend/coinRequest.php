@@ -3,16 +3,6 @@
 
 
 
-
-
-    //documentation::
-    // get need the id
-    // get all just the baseurl
-    //delete need the request_id
-    //add coin request need the user_id and the amount 
-    //delete need the request_id
-    //for the update status , it need the request_id and the staus that need to be updated
-
     $request_method = $_SERVER["REQUEST_METHOD"];
 
     switch ($request_method) {
@@ -81,7 +71,7 @@
     function getCoinRequest($id)
     {
         global $conn;
-        $query = $conn->prepare("SELECT * FROM coinrequests WHERE request_id = ?");
+        $query = $conn->prepare("SELECT *,SUM(amount) as totalAmount FROM coinrequests WHERE user_id = ? and status = 1");
         $query->bind_param("i", $id);
         $query->execute();
         $result = $query->get_result();
