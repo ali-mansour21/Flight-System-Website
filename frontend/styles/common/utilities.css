@@ -202,3 +202,37 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   z-index: 9999;
 }
+
+.footer-section {
+  background-color: #121212;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: white;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap; 
+  width: 80%;
+  margin: auto;
+}
+
+.footer-container a {
+  color: white;
+  text-decoration: none;
+  margin: 5px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icons img {
+  width: 20px;
+  height: 20px;
+}
