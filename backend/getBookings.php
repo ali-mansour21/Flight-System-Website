@@ -12,8 +12,6 @@ $query->bind_result(
     $user_id,
     $flight_id,
     $booking_date,
-    $booking_time,
-    $number_of_passengers,
     $total_price,
     $payment_status,
     $first_name,
@@ -24,10 +22,10 @@ while ($query->fetch()) {
         'id' => $id,
         'user_name' => $first_name . ' ' . $last_name,
         'flight_id' => $flight_id,
-        'payment_status' => $payment_status
+        'payment_status' => $payment_status,
+        'booking_date' => $booking_date,
     ];
     $response['bookings'][] = $booking;
 }
 
 echo json_encode($response);
-?>
