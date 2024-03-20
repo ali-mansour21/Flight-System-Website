@@ -1,49 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./../../styles/booking.css" />
-    <link rel="stylesheet" href="../../styles/common/utilities.css" />
-    <link rel="stylesheet" href="../../styles/admin.css" />
-    <link rel="stylesheet" href="../../styles/profile-settings.css" />
-    <title>Flight System</title>
-  </head>
-  <body>
-    <section class="side-bar">
-      <div class="title-element f-big p-top flex-row gap-5">
-        <img src="../../assets/logo.svg" alt class="logo-img" />
-        <div class="logo">Flight<br />Jet</div>
-      </div>
-      <div class="m-top2 flex-col gap2">
-        <div class="card">
-          <a class="white flex-row gap2" href="../user/profile-settings.html">
-            <img src="../../assets/dashboard.svg" alt />
-            <div class="t-center flex-col j-center">Settings</div>
-          </a>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chat Section</title>
+<link rel="stylesheet" href="../../styles/contact.css">
+</head>
+<body>
+
+<section class="profile-container profile">
+    <section class="profile flex-col gap-20" id="chat-box">
+        <div class="chat-bubble user-bubble">
+          <p class="txt-grey-24">Hi there! I have a question regarding my booking.</p>
         </div>
-        <div class="card">
-          <a class="white flex-row gap2" href="../user/profile-flights.html">
-            <img src="../../assets/flight.svg" alt />
-            <div class="t-center flex-col j-center">Flights</div>
-          </a>
-        </div>
-      </div>
-    </section>
-    <section>
-      <section class="profile flex-col gap-50">
-        <div class="flex">
-          <div class="wtd-50 flex-col txt-black-40 j-center">Contact us</div>
+      
+        <div class="chat-bubble admin-bubble">
+          <p class="txt-grey-24">Hello! Sure, what can I assist you with?</p>
         </div>
 
-        <div>
-          <div class="txt-black-24">Put your message here</div>
-          <div class="box-1 just-center wtd-100 txt-grey-24">
-            <input type="text">
-          </div>
-        </div>
-        
       </section>
-      
-  </body>
+      <section class="input-section">
+          <input type="text" id="user-input" placeholder="Type your message...">
+          <button onclick="sendMessage()">Send</button>
+      </section>
+</section>
+<script src="../../scripts/contact.js"></script>
+</body>
 </html>
