@@ -133,7 +133,6 @@ const editFlight = async (flightId) => {
   const flightDetails = flights.find(
     (flight) => flight.id === parseInt(flightId)
   );
-  console.log(flightDetails);
   const editDepartureAirport = document.getElementById("editDepartureAirport");
   const editArrivalAirport = document.getElementById("editArrivalAirport");
   const editDepartureDate = document.getElementById("editDepartureDate");
