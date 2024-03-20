@@ -1,4 +1,5 @@
 const confirmContainer = document.getElementById("confirmContainer");
+const reviewContainer = document.getElementById("reviewContainer");
 let flights = [];
 let userAmount = 0;
 const getConfirmFlights = () => {
@@ -28,7 +29,21 @@ const showToast = (message, duration = 2000) => {
     toast.remove();
   }, duration);
 };
-
+const getReviewData = async () => {
+  try {
+    const user_id = parseInt(localStorage.getItem("user_id"));
+    const response = await axios.get(
+      `http://localhost/Flight-System/backend/userFlight.php?id=${user_id}`
+    );
+    const reviewFlights = response.data.flights;
+    reviewContainer.innerHTML = "";
+    reviewFlights.forEach((flight) => {
+      reviewContainer.innerHTML += generateReviewCardElement(flight);
+    });
+  } catch (error) {
+    console.log(error);
+  }
+};
 const generateCreateCardElement = (flight) => {
   const {
     base_price,
@@ -69,6 +84,45 @@ const generateCreateCardElement = (flight) => {
         </div>
       </div>`;
 };
+const generateReviewCardElement = (flight) => {
+  const {
+    base_price,
+    id,
+    departure_time,
+    arrival_time,
+    departure_airport,
+    arrival_airport,
+  } = flight;
+  return `<div class="card flex-col txt-20">
+        <div class="flex-row gap1">
+          <img src="./../../assets/bookig-page/plain-1.svg" alt />
+          <div class="flex-col dep-data j-center">
+            <div>${formatTime(departure_time)} - ${formatTime(
+    departure_time,
+    1
+  )}</div>
+            <div>${departure_airport}</div>
+          </div>
+        </div>
+        <div class="flex-row gap1">
+          <img src="./../../assets/bookig-page/plain-2.svg" alt />
+          <div class="flex-col dep-data j-center">
+            <div>${formatTime(arrival_time)} - ${formatTime(
+    arrival_time,
+    1
+  )}</div>
+            <div>${arrival_airport}</div>
+          </div>
+        </div>
+        <div class="flex-row gap1">
+          <div class="txt-32">
+            $${base_price}
+          </div>
+          <div>
+          </div>
+        </div>
+      </div>`;
+};
 const confirmFlight = async (id) => {
   const flightId = parseInt(id);
   const flight = flights.find((flight) => flight.id === flightId);
@@ -103,5 +157,5 @@ const fillConfirmFlightsContainer = () => {
   });
 };
 fillConfirmFlightsContainer();
-
+getReviewData();
 document.addEventListener("DOMContentLoaded", getConfirmFlights);
