@@ -3,9 +3,8 @@
 include "./connection.php";
 
 
-//when using the api , it need a user id to get the data
 
-$user_id = $_GET['user'];
+$user_id = $_GET['id'];
 
 if (!empty($user_id)) {
     $id = intval($user_id);
@@ -15,12 +14,13 @@ if (!empty($user_id)) {
     echo json_encode($response);
 }
 
-function getflights($user_id) {
-    global $conn; 
+function getflights($user_id)
+{
+    global $conn;
     $query = $conn->prepare("SELECT f.* FROM flights AS f
         JOIN bookings AS b ON f.flight_id = b.flight_id 
         JOIN users AS u ON b.user_id = u.user_id
-        WHERE u.user_id = ?");
+        WHERE u.user_id = ? and b.payment_status = 1");
 
     $query->bind_param("i", $user_id);
     $query->execute();
@@ -33,4 +33,3 @@ function getflights($user_id) {
 
     return ["status" => "Success", "flights" => $flights];
 }
-?>

@@ -66,7 +66,9 @@ function getUserType(token) {
     const [_, payloadEncoded] = token.split(".");
     const payload = JSON.parse(atob(payloadEncoded));
     const userType = payload.user_type;
-
+    const userId = payload.user_id;
+    localStorage.setItem("user_id", userId);
+    
     return userType;
   } catch (error) {
     console.error("Error extracting user type from JWT token:", error.message);

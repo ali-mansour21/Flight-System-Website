@@ -28,59 +28,25 @@
             <div class="t-center flex-col j-center">Flights</div>
           </a>
         </div>
+        <div class="card">
+          <a class="white flex-row gap2" href="../../index.html">
+            <img src="../../assets/flight.svg" alt />
+            <div class="t-center flex-col j-center">Home</div>
+          </a>
+        </div>
       </div>
     </section>
     <div class="mg-top-10 mg-left-5 flex-col">
       <div class="txt-black-40">Confirm Your Flights</div>
-      <section class="section-3 flex-row">
-        <div class="card flex-col txt-20">
-          <div class="flex-row gap1">
-            <img src="./../../assets/bookig-page/plain-1.svg" alt />
-            <div class="flex-col dep-data j-center">
-              <div>1:40 am -10:20 pm</div>
-              <div>BEY_DEN</div>
-            </div>
-          </div>
-          <div class="flex-row gap1">
-            <img src="./../../assets/bookig-page/plain-2.svg" alt />
-            <div class="flex-col dep-data j-center">
-              <div>1:40 am -10:20 pm</div>
-              <div>BEY_DEN</div>
-            </div>
-          </div>
-          <div class="flex-row">
-            <div class="txt-32">$ 2000</div>
-            <div class="submit-btn">Add To Deal</div>
-          </div>
-        </div>
-      </section>
+      <section class="section-3 flex-row" id="confirmContainer"></section>
 
       <div class="mg-top-10">
         <div class="txt-black-40">Review Your Flights</div>
-        <section class="section-3 flex-row">
-          <div class="card flex-col txt-20">
-            <div class="flex-row gap1">
-              <img src="./../../assets/bookig-page/plain-1.svg" alt />
-              <div class="flex-col dep-data j-center">
-                <div>1:40 am -10:20 pm</div>
-                <div>BEY_DEN</div>
-              </div>
-            </div>
-            <div class="flex-row">
-              <img src="./../../assets/bookig-page/plain-2.svg" alt />
-              <div class="flex-col dep-data j-center">
-                <div>1:40 am -10:20 pm</div>
-                <div>BEY_DEN</div>
-              </div>
-            </div>
-            <div class="flex-row gap1">
-              <div class="txt-32">$ 2000</div>
-              <div class="submit-btn-red">Add To Deal</div>
-            </div>
-          </div>
+        <section class="section-3 flex-row" id="reviewContainer">
         </section>
       </div>
     </div>
-    
+    <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
+    <script src="../../scripts/profileFlights.js"></script>
   </body>
 </html>
